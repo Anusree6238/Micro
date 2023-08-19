@@ -1,0 +1,79 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7283"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/admin",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/admin",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7198
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/admin/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamPathTemplate": "/api/admin/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7198
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/admin",
+      "UpstreamHttpMethod": [ "Post", "Put" ],
+      "DownstreamPathTemplate": "/api/admin",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7198
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/userreg",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/userreg",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7272
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/userreg/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete" ],
+      "DownstreamPathTemplate": "/api/userreg/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7272
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/userreg",
+      "UpstreamHttpMethod": [ "Post", "Put" ],
+      "DownstreamPathTemplate": "/api/userreg",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7272
+        }
+      ]
+    }
+  ]
+}
